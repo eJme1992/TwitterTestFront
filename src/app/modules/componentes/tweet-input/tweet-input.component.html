@@ -1,0 +1,26 @@
+<div class="card" style="margin-bottom: 50px" xmlns="http://www.w3.org/1999/html">
+  <div class="card-body gridlg">
+    <div class="co2">
+      <img  style="width:90%" src='https://dreamingbytes.com/wp-content/uploads/2014/09/dott.jpg' class='imgRedonda center-block' />
+    </div>
+    <form class="col" style="padding:0px 20px 0px 20px" [formGroup]="DataForm" (submit)="onSubmit()">
+
+
+      <textarea (keyup)="write(tweet.value)" #tweet  class="formu"  formControlName="tweet" placeholder="List name">{{tweetwrite}}</textarea><br>
+      <div class="grid">
+        <div class="col">
+          <p> <i class="fas fa-images x5"></i></p>
+        </div>
+        <div class="col" style="text-align: right; color:darkred">
+          <p>{{restante}}</p>
+        </div>
+      </div>
+      <div>
+        <span *ngFor="let item of hashTags"> {{item}} </span>
+      </div>
+
+
+    <button class="bnt" type="submit" >Enviar</button>
+    </form>
+  </div>
+</div>

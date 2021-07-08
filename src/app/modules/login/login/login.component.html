@@ -1,0 +1,71 @@
+<div id="login-form">
+
+  <input type="radio" checked id="login" name="switch" class="hide">
+  <input type="radio" id="signup" name="switch" class="hide">
+
+  <div>
+    <ul class="form-header">
+      <li (click)="login=true"><label><i class="fa fa-lock"></i> LOGIN</label></li>
+      <li (click)="login=false"><label><i class="fa fa-credit-card"></i> REGISTER</label></li>
+    </ul>
+  </div>
+
+
+    <div class="login-section" *ngIf="(login)">
+      <div class="login">
+        <form  [formGroup]="LoginForm" (submit)="onSubmitLogin()" >
+          <ul class="ul-list">
+            <li><input  formControlName="email"  type="text" required class="input" placeholder="Your Email o User name"/><span class="icon"><i class="fa fa-user"></i></span></li>
+            <li><input  formControlName="password"  type="password" required class="input" placeholder="Password"/><span class="icon"><i class="fa fa-lock"></i></span></li>
+            <li><span   class="remember"><input type="checkbox" id="check"> <label for="check">Remember Me</label></span><span class="remember"><a href="">Forget Password</a></span></li>
+            <li><input type="submit" value="SIGN IN" class="btn"></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+
+    <div class="signup-section" *ngIf="!login">
+      <div class="login">
+        <form [formGroup]="DataForm" (submit)="onSubmit()" >
+          <ul class="ul-list">
+            <li>
+              <input formControlName="first_name" type="text" required class="input" placeholder="First Name"/>
+              <span class="icon"><i class="fas fa-file-signature"></i></span>
+            </li>
+            <li>
+              <input formControlName="last_name" type="text" required class="input" placeholder="Last Name"/>
+              <span class="icon"><i class="fas fa-file-signature"></i></span>
+            </li>
+            <li>
+              <input formControlName="username" type="text" required class="input" placeholder="User name" (keyup)="searchWordUserName(buscarTextoUser.value)" #buscarTextoUser/>
+              <span class="icon"><i class="fa fa-user"></i></span>
+              <br>
+              <div class="aviso" *ngIf="usernamev==true && usernamef==true" style="border: 1px solid green;">Disponible <i class="fas fa-check"></i></div>
+              <div class="aviso" *ngIf="usernamev==false && usernamef==true" style="border: 1px solid red;">En uso</div>
+            </li>
+            <li>
+              <input  formControlName="email" type="email" required class="input" placeholder="Your Email" (keyup)="searchWordMail(buscarTexto.value)" #buscarTexto/>
+              <span class="icon"><i class="fas fa-envelope-open-text"></i></span>
+              <br>
+              <div class="aviso" *ngIf="emailv==true && emailf==true" style="border: 1px solid green;">Disponible <i class="fas fa-check"></i></div>
+              <div class="aviso" *ngIf="emailv==false && emailf==true" style="border: 1px solid red;">En uso</div>
+
+            </li>
+
+            <li><input formControlName="password" type="password" required class="input" placeholder="Password"/><span class="icon"><i class="fa fa-lock"></i></span></li>
+
+
+            <li><input type="checkbox" (change)="eventCheck($event)" id="check1"> <label for="check1">I accept terms and conditions</label></li>
+            <li>
+              <button  class="btn" type="submit">Register</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+
+    </div>
+
+
+
+</div>

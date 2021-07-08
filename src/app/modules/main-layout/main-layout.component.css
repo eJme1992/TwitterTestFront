@@ -1,0 +1,36 @@
+p, h4, span {
+  color: #7B7B7B !important;
+}
+
+.btnmenu{
+  margin: 20px 0px 20px 0px;
+  font-size: 25px;
+  background: transparent;
+  color: #eeeeee;
+  font-weight: 560;
+  text-align: left;
+}
+.menubar{
+  border-right: #f2f2f2 1px solid;
+  padding: 20px;
+}
+.menuoptions{
+  position: sticky;
+  top:80px
+}
+.perfilcard{
+  color: #e8e8e8 !important;
+  border: #ffffff 0.5px solid !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: transparent !important;
+  background-clip: border-box;
+  border-radius: .25rem;
+}
+contenct2{
+  padding: 60px 100px 10px 100px;
+}
+

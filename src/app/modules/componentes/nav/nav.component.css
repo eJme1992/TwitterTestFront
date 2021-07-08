@@ -1,0 +1,33 @@
+/********************** Nav ****************************/
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+.main{
+  background: #FF0000;
+  color:#fff;
+  padding: 5px 25px 5px 25px;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  flex-direction: row;
+}
+.navbar li {
+  display: list-item;
+  padding: 20px 40px 20px 40px;
+}
+.logo{
+  width: 10em !important;
+}
+.logo img{
+  width: 10em !important;
+}
+.justify-content-end {
+  justify-content: flex-end!important;
+}

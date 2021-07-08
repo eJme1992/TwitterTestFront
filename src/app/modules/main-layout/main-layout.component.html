@@ -1,0 +1,32 @@
+<div class="grid cuerpo">
+  <!-- contenedor -->
+  <div class="co4 menubar">
+    <div class="menuoptions">
+      <img style="width: 100%" src="assets/img/Logo1.png">
+      <button class="btn btn-block btnmenu"><i class="fas fa-home"></i> Inicio</button>
+      <button class="btn btn-block btnmenu"><i class="fas fa-globe-europe"></i> Explorar</button>
+      <button class="btn btn-block btnmenu"><i class="fas fa-bell"></i> Notificaciones</button>
+      <button class="btn btn-block btnmenu"><i class="fas fa-user-friends"></i> Perfil</button>
+
+      <div class="perfilcard">
+        <div class="card-body grid">
+          <img style="max-width:50px; max-height:50px;margin: auto;" src='https://dreamingbytes.com/wp-content/uploads/2014/09/dott.jpg' class='imgRedonda co4' />
+          <div class="text-center col">
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- cada uno de los ítems del grid -->
+  <div class="col content">
+    <app-nav></app-nav>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>
+
+
+
+
