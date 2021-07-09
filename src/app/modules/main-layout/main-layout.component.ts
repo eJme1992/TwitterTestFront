@@ -9,7 +9,7 @@ import {UserService} from "../../services/user.service";
 })
 export class MainLayoutComponent implements OnInit {
 
-  user: any = {}
+  user: any = null;
 
 
   constructor(
@@ -17,10 +17,16 @@ export class MainLayoutComponent implements OnInit {
     private UserService: UserService,
   ) {
     this.user = UserService.getUser();
-    console.log(this.user );
+    if(Object.keys(this.user).length == 0){
+      this.validar();
+    }
   }
 
   ngOnInit(): void {
+
   }
 
+  validar(){
+    this.route.navigate(['']);
+  }
 }

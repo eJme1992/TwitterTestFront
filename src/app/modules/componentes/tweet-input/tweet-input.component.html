@@ -1,17 +1,18 @@
-<div class="card" style="margin-bottom: 50px" xmlns="http://www.w3.org/1999/html">
+<div class="card" id="cardinput" xmlns="http://www.w3.org/1999/html">
   <div class="card-body gridlg">
     <div class="co2">
       <img  style="width:90%" src='https://dreamingbytes.com/wp-content/uploads/2014/09/dott.jpg' class='imgRedonda center-block' />
     </div>
-    <form class="col" style="padding:0px 20px 0px 20px" [formGroup]="DataForm" (submit)="onSubmit()">
+    <form class="col" [formGroup]="DataForm" (submit)="onSubmit()">
 
 
       <textarea (keyup)="write(tweet.value)" #tweet  class="formu"  formControlName="tweet" placeholder="List name">{{tweetwrite}}</textarea><br>
       <div class="grid">
         <div class="col">
-          <p> <i class="fas fa-images x5"></i></p>
+
+          <p> <input class="fas fa-images x5" type="file" name="imagen" #imagen  (change)="cargarImagen($event)"></p>
         </div>
-        <div class="col" style="text-align: right; color:darkred">
+        <div class="col" id="restante">
           <p>{{restante}}</p>
         </div>
       </div>

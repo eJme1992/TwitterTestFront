@@ -12,4 +12,13 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout(){
+    console.log('entor');
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
+      console.log('se ejecuto');
+
+
+  }
+
 }

@@ -1,14 +1,17 @@
 <div class="card mensaje">
-  <div class="card-body gridlg">
+  <div class="card-body ">
+    <div class="gridlg">
     <div class="co2">
-      <img  style="width:90%; margin:auto;height:90%" src='https://dreamingbytes.com/wp-content/uploads/2014/09/dott.jpg' class='imgRedonda center-block' />
+      <img id="perfil" src='https://dreamingbytes.com/wp-content/uploads/2014/09/dott.jpg' class='imgRedonda center-block' />
     </div>
-    <div class="col" style="padding:0px 20px 0px 20px">
-      <label style="color:#ffffff"><b>Edwin Jose Mongollon</b></label><span style="color:darkred">  - @eJme1992</span>
-      <p>Más de 12h para dar respuesta a una falla es una falta de respeto sobre todo si es un jodido plan que según es para teletrabajo. Señores si estoy trabajando con Internet hasta 1 hora sin conexión es un problema. de 4 a 12h para solventar una falla una desgracia
-        @TeleCentroAr
-      </p>
-      <p STYLE="text-align: right">01/01/2021</p>
+    <div id="cont" class="col" >
+      <label><b>{{tweet.myuser.first_name}} {{tweet.myuser.last_name}}</b></label><span>  - @{{tweet.myuser.username}}</span>
+      <p>{{tweet.content}}</p>
+      <p STYLE="text-align: right">{{tweet.created_at}}</p>
+    </div>
+    </div>
+    <div *ngIf="tweet.img!==null">
+        <img src="{{urlbase}}api/getfile/{{tweet.img.name}}" style="width:100%">
     </div>
   </div>
 </div>

@@ -1,12 +1,12 @@
-<div class="contenct2" style="padding: 10px 60px 10px 60px">
-<app-tweet-input></app-tweet-input>
+<div id="home" (scroll)="doSomethingOnScroll($event)">
+<app-tweet-input (optionSelect)="send($event)"></app-tweet-input>
 <!-- MENSAJES -->
 <h3 style="color:#ffffff">Tweets</h3>
-<app-tweet-card></app-tweet-card>
-<app-tweet-card></app-tweet-card>
-<app-tweet-card></app-tweet-card>
-<app-tweet-card></app-tweet-card>
-<app-tweet-card></app-tweet-card>
+
+  <div *ngFor="let item of tweets">
+      <app-tweet-card [tweet]="item"></app-tweet-card>
+  </div>
+
 </div>
 
 

@@ -1,0 +1,14 @@
+#perfil{
+  width:90% !important;
+  margin:auto !important;
+  height:90%!important;
+}
+#cont{
+  padding:0px 20px 0px 20px
+}
+label{
+  color:#ffffff
+}
+span{
+  color:darkred;
+}

@@ -1,0 +1,9 @@
+#cardinput{
+  margin-bottom: 50px
+}
+form{
+  padding:0px 20px 0px 20px
+}
+#restante{
+  text-align: right !important; color:darkred
+}

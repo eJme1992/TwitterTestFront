@@ -30,7 +30,5 @@ p, h4, span {
   background-clip: border-box;
   border-radius: .25rem;
 }
-contenct2{
-  padding: 60px 100px 10px 100px;
-}
+#imgp{max-width:50px; max-height:50px;margin: auto;}
 

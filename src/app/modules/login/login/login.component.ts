@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from "../../../services/user.service";
 import {FormGroup, FormControl, Validators, AbstractControl} from '@angular/forms';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -34,10 +34,12 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private UserService: UserService,
-    private route: Router
+    private route: Router,
+    private router: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+
   }
 
 
@@ -75,6 +77,8 @@ export class LoginComponent implements OnInit {
     console.log(event.target.checked)
     this.checked = event.target.checked;
   }
+
+
 
   onSubmit(): void {
     let sentinela: number = 0;
@@ -123,8 +127,8 @@ export class LoginComponent implements OnInit {
           )
           localStorage.setItem('token',data.data.data);
           localStorage.setItem('user',JSON.stringify(data.data.user));
-         // this.route.navigate(['/home']);
-          console.log(data.data.data);
+          this.route.navigate(['/home']);
+         // console.log(data.data.data);
         }else{
           Swal.fire(
             'Error!',
